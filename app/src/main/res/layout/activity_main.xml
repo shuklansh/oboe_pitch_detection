@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#111">
+
+    <TextView
+        android:id="@+id/pitchTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:textColor="#FFFFFF" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24.dp"/>
+    <TextView
+        android:id="@+id/pitchNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="28sp"
+        android:textColor="#FFFFFF" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24.dp"/>
+    <Button
+        android:id="@+id/stopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="24.dp"/>
+    <FrameLayout
+        android:id="@+id/pointer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.oboepitch.PitchWheelView
+            android:id="@+id/pitchWheel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+        />
+
+        <ImageView
+            android:id="@+id/needle"
+            android:layout_width="40dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/baseline_arrow_upward_24"
+            android:scaleType="fitCenter"
+            android:pivotX="0.5"
+            android:pivotY="0.9"
+            android:rotation="0" />
+    </FrameLayout>
+
+</LinearLayout>
